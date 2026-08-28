@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modular AI Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="score-board">Score: 0</div>
+    <button id="score-btn">Score Points</button>
+
+    <!-- The type="module" attribute is the secret sauce here -->
+    <script type="module">
+        import { playerScored } from './game.js';
+        
+        // Wire up the button to our modular game logic
+        document.getElementById('score-btn').addEventListener('click', playerScored);
+    </script>
+</body>
+</html>
